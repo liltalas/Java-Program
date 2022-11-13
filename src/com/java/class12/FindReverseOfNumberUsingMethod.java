@@ -1,0 +1,35 @@
+package com.java.class12;
+
+import java.util.Scanner;
+
+public class FindReverseOfNumberUsingMethod {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Please enter a number (100 to 999: )");
+        int num = sc.nextInt();
+        int rev = getReverse(num);
+
+    }
+
+    static int getReverse(int num){
+        int rev = 0;
+
+        //retrieve last digit from the number
+        int lastDigit = num % 10; //4
+        //combine last digit with previous value of reverse number
+        rev = rev * 10 + lastDigit;// 0*10+4
+        //removing last digit from the number
+        num = num /10; // num = 87
+
+        lastDigit = num % 10; //7
+        rev = rev * 10 + lastDigit; //4*10+7=47
+        num = num /10;// num = 8
+
+        lastDigit = num % 10; // last digit = 8
+        rev = rev*10+lastDigit; // 47*10+8 = 478
+        num = num /10; // num = 0
+
+        return rev;
+    }
+}
