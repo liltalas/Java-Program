@@ -1,5 +1,5 @@
 package com.java.class23;
-
+// write the same code by yourself from the file TwoDimensionArray
 public class Task1_Exercise2DArray {
     public static void main(String[] args) {
         int data[][] ={{23, 34, 62},
