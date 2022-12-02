@@ -9,17 +9,20 @@ public class Bank {
     int routingNumber;
     char typeOfAccount;
     String currency;
+    double totalBalance;
 
     // actions
     void deposit(double amount){
-        balance = balance + amount;
+
+        totalBalance= balance + amount;
     }
 
     void withdraw(double amount){
-        balance = balance - amount;
+
+        totalBalance = balance - amount;
     }
 
-    void transferMoney(String accNumber, double amount){
+    void transferMoney(int accNumber, double amount){
         System.out.println("Transferring " + amount + " to " + accNumber);
     }
 
