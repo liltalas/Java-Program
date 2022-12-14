@@ -1,9 +1,11 @@
 package com.java.class29;
 
 // U can call a Constructor from another constructor only
+// u can call a Constructor from another constructor,
+// but it has to be called in the first line only
 class Bank{
     Bank(){
-       // this(10);
+        this(10); // passing the parameter to this keyboard using the parentheses calls the constructors
         System.out.println("From Bank");
     }
 
@@ -17,7 +19,7 @@ class Bank{
     }
 
     Bank(double a, String name){
-        this();
+//        this(); - will be looping and therefore, it shows an exception
     }
 
 }
@@ -25,6 +27,6 @@ class Bank{
 
 public class ThisAndSuperWithConstructor {
     public static void main(String[] args) {
-        Bank b = new Bank(548);
+        Bank b = new Bank();
     }
 }
